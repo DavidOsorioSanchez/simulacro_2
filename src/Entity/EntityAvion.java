@@ -3,12 +3,12 @@ package Entity;
 public class EntityAvion {
     private int ID_Avion;
     private String Modelo;
-    private String Capacidad;
+    private int Capacidad;
 
     public EntityAvion() {
     }
 
-    public EntityAvion(String modelo, String capacidad) {
+    public EntityAvion(String modelo, int capacidad) {
         Modelo = modelo;
         Capacidad = capacidad;
     }
@@ -17,8 +17,8 @@ public class EntityAvion {
         return ID_Avion;
     }
 
-    public void setID_Avion(int id_Avion) {
-        ID_Avion = id_Avion;
+    public void setID_Avion(int ID_Avion) {
+        this.ID_Avion = ID_Avion;
     }
 
     public String getModelo() {
@@ -29,11 +29,11 @@ public class EntityAvion {
         Modelo = modelo;
     }
 
-    public String getCapacidad() {
+    public int getCapacidad() {
         return Capacidad;
     }
 
-    public void setCapacidad(String capacidad) {
+    public void setCapacidad(int capacidad) {
         Capacidad = capacidad;
     }
 
@@ -42,7 +42,7 @@ public class EntityAvion {
         return "EntityAvion{" +
                 "ID_Avion=" + ID_Avion +
                 ", Modelo='" + Modelo + '\'' +
-                ", Capacidad='" + Capacidad + '\'' +
+                ", Capacidad=" + Capacidad +
                 '}';
     }
 }

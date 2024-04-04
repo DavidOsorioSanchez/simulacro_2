@@ -7,6 +7,9 @@ public class EntityPasajero {
     private String ApellidoPasajero;
     private String Documento_Identidad;
 
+    public EntityPasajero() {
+    }
+
     public EntityPasajero(String nombrePasajero, String apellidoPasajero, String documento_Identidad) {
         NombrePasajero = nombrePasajero;
         ApellidoPasajero = apellidoPasajero;
