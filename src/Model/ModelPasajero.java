@@ -54,7 +54,7 @@ public class ModelPasajero implements CRUDPasajero {
         List<Object> listaPasajero = new ArrayList<>();
 
         try {
-            String SQL = "SELECT * FROM Pasajero BY Pasajero.id_Pasajero ASC;";
+            String SQL = "SELECT * FROM Pasajero ORDER BY Pasajero.nombrePasajero ASC;";
 
             PreparedStatement objPrepare = (PreparedStatement) objConnection.prepareStatement(SQL);
 

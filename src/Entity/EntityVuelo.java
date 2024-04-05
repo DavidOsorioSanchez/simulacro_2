@@ -6,11 +6,18 @@ public class EntityVuelo {
     private String Destino;
     private String Fecha_Salida;
     private int Hora_Salida;
+    private int fk_ID_Avion;
+    private EntityAvion avionEntidad;
 
-    public EntityVuelo(String destino, String fecha_Salida, int hora_Salida) {
+    public EntityVuelo() {
+    }
+
+    public EntityVuelo(String destino, String fecha_Salida, int hora_Salida, int fk_ID_Avion, EntityAvion avionEntidad) {
         Destino = destino;
         Fecha_Salida = fecha_Salida;
         Hora_Salida = hora_Salida;
+        this.fk_ID_Avion = fk_ID_Avion;
+        this.avionEntidad = avionEntidad;
     }
 
     public int getID_Vuelo() {
@@ -45,6 +52,22 @@ public class EntityVuelo {
         Hora_Salida = hora_Salida;
     }
 
+    public int getFk_ID_Avion() {
+        return fk_ID_Avion;
+    }
+
+    public void setFk_ID_Avion(int fk_ID_Avion) {
+        this.fk_ID_Avion = fk_ID_Avion;
+    }
+
+    public EntityAvion getAvionEntidad() {
+        return avionEntidad;
+    }
+
+    public void setAvionEntidad(EntityAvion avionEntidad) {
+        this.avionEntidad = avionEntidad;
+    }
+
     @Override
     public String toString() {
         return "EntityVuelo{" +
@@ -52,6 +75,8 @@ public class EntityVuelo {
                 ", Destino='" + Destino + '\'' +
                 ", Fecha_Salida='" + Fecha_Salida + '\'' +
                 ", Hora_Salida=" + Hora_Salida +
+                ", fk_ID_Avion=" + fk_ID_Avion +
+                ", avionEntidad=" + avionEntidad +
                 '}';
     }
 }

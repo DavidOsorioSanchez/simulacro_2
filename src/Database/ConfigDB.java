@@ -1,5 +1,6 @@
 package Database;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -22,12 +23,12 @@ public class ConfigDB {
 
             //Establecemos la conexión
             objConnection = (Connection) DriverManager.getConnection(url,user,password);
-            System.out.println("Me conecté perfectamente!!!!");
+
 
         }catch (ClassNotFoundException e){
-            System.out.println("Error >> Driver no Instalado");
+            JOptionPane.showMessageDialog(null,"Error >> Driver no Instalado");
         }catch (SQLException e){
-            System.out.println("Error >> No se pudo establecer una conexión con la BD"+e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error >> No se pudo establecer una conexión con la BD"+e.getMessage());
         }
 
         return objConnection;
@@ -41,7 +42,7 @@ public class ConfigDB {
             if (objConnection != null) objConnection.close();
 
         }catch (SQLException e){
-            System.out.println("ERROR: "+ e.getMessage());
+            JOptionPane.showMessageDialog(null,"ERROR: "+ e.getMessage());
         }
     }
 

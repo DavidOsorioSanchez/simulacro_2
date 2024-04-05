@@ -1,5 +1,6 @@
 import Controller.AvionController;
 import Controller.PasajeroController;
+import Controller.VueloController;
 import Database.ConfigDB;
 
 import javax.swing.*;
@@ -35,10 +36,10 @@ public class Main {
                                 """));
                         switch (option2){
                             case 1:
-                                AvionController.update();
+                                AvionController.insert();
                                 break;
                             case 2:
-                                AvionController.insert();
+                                AvionController.update();
                                 break;
                             case 3:
                                 AvionController.borrar();
@@ -78,31 +79,31 @@ public class Main {
                     }while (option2 != 5);
                     break;
                 case 3:
-//                    do {
-//                        option2 = Integer.parseInt(JOptionPane.showInputDialog(null, """
-//                                1. Añadir informacion a Cita
-//                                2. Modificar Cita
-//                                3. Borrar Cita
-//                                4. Listar Cita
-//                                5. Salir
-//
-//                                Elige la opcion que mas te conviene.
-//                                """));
-//                        switch (option2){
-//                            case 1:
-//                                CitaController.insert();
-//                                break;
-//                            case 2:
-//                                CitaController.update();
-//                                break;
-//                            case 3:
-//                                CitaController.borrar();
-//                                break;
-//                            case 4:
-//                                CitaController.listar();
-//                                break;
-//                        }
-//                    }while (option2 != 5);
+                    do {
+                        option2 = Integer.parseInt(JOptionPane.showInputDialog(null, """
+                                1. Añadir informacion a Vuelo
+                                2. Modificar Vuelo
+                                3. Borrar Vuelo
+                                4. Listar Vuelo
+                                5. Salir
+
+                                Elige la opcion que mas te conviene.
+                                """));
+                        switch (option2){
+                            case 1:
+                                VueloController.insert();
+                                break;
+                            case 2:
+                                VueloController.update();
+                                break;
+                            case 3:
+                                VueloController.borrar();
+                                break;
+                            case 4:
+                                VueloController.listar();
+                                break;
+                        }
+                    }while (option2 != 5);
                     break;
                 case 4:
 //                    do {
