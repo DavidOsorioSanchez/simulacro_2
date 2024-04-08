@@ -11,12 +11,12 @@ import java.sql.Connection;
 public class Main {
     public static void main(String[] args) {
         int option1 = 0, option2 = 0;
-
+        ConfigDB.openConnection();
         do {
             option1 = Integer.parseInt(JOptionPane.showInputDialog(null, """
                     1. Administrar aviones
                     2. Administrar pasajeros
-                    3. Administrar Citas
+                    3. Administrar Vuelos
                     4. Administrar Pacientes
                     5. Salir
                     

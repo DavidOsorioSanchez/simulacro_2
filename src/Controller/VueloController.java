@@ -20,6 +20,7 @@ public class VueloController {
 
         EntityAvion objAvion = (EntityAvion) JOptionPane.showInputDialog(null, "Selecciona el avion correspondiente", "sin titulo", JOptionPane.QUESTION_MESSAGE, null, optionAvion, optionAvion[0]);
 
+        insetaceModel().insertarVuelo(new EntityVuelo(destiny, date, hour, objAvion.getID_Avion(),objAvion));
     }
 
     public static ModelVuelo insetaceModel() {
@@ -29,13 +30,12 @@ public class VueloController {
 //    hacer toda la lista
     public  static void listar(){
         String lista = listar(insetaceModel().listarVuelo());
-
         JOptionPane.showMessageDialog(null, lista);
     }
 
-    public static String listar(List<Object> listaGrande){
+    public static String listar(List<Object> listadon){
         String listado = "Listado de vuelos";
-        for (Object iterable: listaGrande){
+        for (Object iterable: listadon){
             EntityVuelo objMoldelos = (EntityVuelo) iterable;
             listado += objMoldelos.toString() + "\n";
         }
@@ -63,7 +63,7 @@ public class VueloController {
         EntityAvion objAvion= (EntityAvion) JOptionPane.showInputDialog(null, "selecciona un avion","",JOptionPane.QUESTION_MESSAGE, null,AvionOpcionado,AvionOpcionado[0]);
 
 
-        insetaceModel().actualizarVuelo(new EntityVuelo(NewDestiny,NewDate,NewHour,objAvion.getID_Avion(),objAvion));
+        insetaceModel().actualizarVuelo(new EntityVuelo(NewDestiny, NewDate, NewHour, objAvion.getID_Avion(), objAvion));
     }
 
 }
